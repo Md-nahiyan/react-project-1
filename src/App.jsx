@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/results" element={<Results/>}/>
-        <Route path="/mealPage" element={<MealPage/>}/>
+        <Route path="/:MealId" element={<MealPage/>}/>
         {/* <Route path="/meal/:strCategory" element={<MealCategory />}/> */}
       </Routes>
       <Footer/>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// import logo from "../assets/IMG_2176.JPG"
 
 
 
@@ -23,7 +23,7 @@ export default function Header() {
                         <div className="w-10 rounded-full">
                         <img
                             alt="Tailwind CSS Navbar component"
-                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            src="https://scontent.fcgp3-2.fna.fbcdn.net/v/t39.30808-1/455809632_2353575904992904_2352601610104214173_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=50d2ac&_nc_eui2=AeGCctZo5cOwWWc3VZPPiusexYk_k9koz-fFiT-T2SjP5z8sdt45l4MGMjwV85w38lhHq2ArWzm2O_6jlGfWa-jI&_nc_ohc=3k3kMEe9yAEQ7kNvgE4Cjan&_nc_ht=scontent.fcgp3-2.fna&_nc_gid=AOsqZLzhDUx0lpW8pJzUxm1&oh=00_AYBh7Frp496Hz5sjJjtC7hLVsWk0VQFMrGT7Q8L2NN682g&oe=66E77DFF" />
                         </div>
                     </div>
                     <ul

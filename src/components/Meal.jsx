@@ -8,16 +8,21 @@ import SearchBar from './SearchBar';
 export default function Meal() {
 
     const [meal, setMeal] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const getMeal = async () => {
-        const MEAL_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+        const MEAL_URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`;
 
         try {
             const response = await fetch(MEAL_URL);
             const data =await response.json();
-            console.log(data.categories);
-            
-            setMeal(data.categories);
+            console.log(data.meals);
+
+            if (data.meals) {
+                setMeal(data.meals);  // Only set meal if meals exist
+              } else {
+                setMeal([]);  // Reset if no meals found
+              }
         } catch (error) {
             console.log(error)
         }
@@ -37,7 +42,7 @@ export default function Meal() {
             
             {
                 meal.map ( (items)=> (
-                    <MealCard key={items.idCategory} meals={items}/>
+                    <MealCard key={items.idMeal} meals={items}/>
                 ))
             }
             
